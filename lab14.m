@@ -100,7 +100,7 @@ end;
 %% Noise filtering
 
 clear;
-ImJPG=imread('checkers.pgm')
+ImJPG=imread('checkers.pgm');
 [m,n]=size(ImJPG);
 
 % Add some noise to the image
