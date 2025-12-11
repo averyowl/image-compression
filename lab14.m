@@ -108,7 +108,7 @@ end;
 %% Noise filtering
 
 clear;
-ImJPG=imread('checkers.pgm');
+ImJPG=imread('checkers.pgm')
 [m,n]=size(ImJPG);
 
 % Add some noise to the image
@@ -126,8 +126,7 @@ figure;
 plot(1:min(m,n),diag(SIm),'ko');
 
 %% Task 14:
-% for k=10:20:50
-for k=10:30:50 
+for k=10:20:50
     ImJPG_comp=uint8(UIm(:,1:k)*SIm(1:k,1:k)*(VIm(:,1:k))');
     figure;
     imshow(ImJPG_comp)
