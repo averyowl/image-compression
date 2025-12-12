@@ -69,7 +69,7 @@ disp("We see that that is the case for U and V.")
 det_U = det(U)
 det_V = det(V)
 
-disp("With U1 and V2 we see that the det is 1, meaning it doesn't " + ...
+disp("With U1 and V1 we see that the det is 1, meaning it doesn't " + ...
     "cause a reflection.")
 det_U1 = det(U1)
 det_V1 = det(V1)
