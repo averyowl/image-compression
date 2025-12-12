@@ -76,7 +76,7 @@ det_V1 = det(V1)
 
 disp("We can see that U1 and V1 can still be used to construct A by "+ ...
     "subtracting A from U1\SigmaV^T and getting an answer close to 0")
-U1*S*V1'-A
+U1_S_V1T = U1*S*V1'-A
 
 AX1 = U1*S*V1'*X;
 
