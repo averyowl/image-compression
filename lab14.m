@@ -63,63 +63,7 @@ U1(:,2)=-U(:,2);
 V1(:,1)=V(:,1);
 V1(:,2)=-V(:,2);
 
-disp("If the determinant is equal to -1 it causes a reflection.")
-
-disp("We see that that is the case for U and V.")
-det_U = det(U)
-det_V = det(V)
-
-disp("With U1 and V2 we see that the det is 1, meaning it doesn't " + ...
-    "cause a reflection.")
-det_U1 = det(U1)
-det_V1 = det(V1)
-
-disp("We can see that U1 and V1 can still be used to construct A by "+ ...
-    "subtracting A from U1\SigmaV^T and getting an answer close to 0")
 U1*S*V1'-A
-
-AX1 = U1*S*V1'*X;
-
-figure;
-subplot(2,2,1);
-hold on;
-plot(X(1,:),X(2,:),'b');
-quiver(0,0,1,0,0,'r');
-quiver(0,0,0,1,0,'g');
-axis equal
-title('Unit circle')
-hold off;
-
-VX1=V1'*X;
-subplot(2,2,2)
-hold on;
-plot(VX1(1,:),VX1(2,:),'b');
-quiver(0,0,V1(1,1),V1(1,2),0,'r');
-quiver(0,0,V1(2,1),V1(2,2),0,'g');
-axis equal
-title('Multiplied by matrix V1^T')
-hold off;
-
-UX1=U1'*X;
-subplot(2,2,3)
-hold on;
-plot(UX1(1,:),UX1(2,:),'b');
-quiver(0,0,U1(1,1),U1(1,2),0,'r');
-quiver(0,0,U1(2,1),U1(2,2),0,'g');
-axis equal
-title('Multiplied by matrix U1^T')
-hold off;
-
-subplot(2,2,4)
-hold on;
-plot(AX1(1,:),AX1(2,:),'b');
-quiver(0,0,U1(1,1)*S(1,1)*V1(1,1)+U1(1,2)*S(2,2)*V1(1,2),U1(2,1)*S(1,1)*...
-    V1(1,1)+U1(2,2)*S(2,2)*V1(1,2),0,'r');
-quiver(0,0,U1(1,1)*S(1,1)*V1(2,1)+U1(1,2)*S(2,2)*V1(2,2),U1(2,1)*S(1,1)*...
-    V1(2,1)+U1(2,2)*S(2,2)*V1(2,2),0,'g');
-axis equal
-title('Multiplied by matrix U1\Sigma V1^T=A')
-hold off;
 
 %% Task 7:
 %% Check
