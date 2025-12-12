@@ -1,5 +1,8 @@
 %% Lab 14: Singular Value Decomposition and Image Compression
 
+%% Create diary log
+diary lab14_commandlog.txt
+
 %% Task 1: 
 %% 2x2 matrix
 
@@ -190,3 +193,6 @@ for k=10:20:50
     pct = 1 - (numel(UIm(:,1:k))+numel(VIm(:,1:k)*SIm(1:k,1:k)))/numel(ImJPG);
     fprintf('Compression percentage for %2.0f singular values: %8.3f\n',k, pct);
 end;
+
+%% End diary log 
+diary off;
