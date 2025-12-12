@@ -72,14 +72,14 @@ disp("We see that that is the case for U and V.")
 det_U = det(U)
 det_V = det(V)
 
-disp("With U1 and V2 we see that the det is 1, meaning it doesn't " + ...
+disp("With U1 and V1 we see that the det is 1, meaning it doesn't " + ...
     "cause a reflection.")
 det_U1 = det(U1)
 det_V1 = det(V1)
 
 disp("We can see that U1 and V1 can still be used to construct A by "+ ...
     "subtracting A from U1\SigmaV^T and getting an answer close to 0")
-U1*S*V1'-A
+U1_S_V1T = U1*S*V1'-A
 
 AX1 = U1*S*V1'*X;
 
